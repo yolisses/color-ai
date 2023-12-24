@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+div,
+html,
+body {
+  @apply flex flex-col;
+}
+
+button {
+  @apply flex p-2 items-center justify-center;
+}
+
+button:disabled {
+  @apply opacity-50;
+}
+
+body {
+  @apply flex-1;
+}
+
+html {
+  @apply bg-zinc-900 text-white select-none;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+@layer utilities {
+  .colorful {
+    background-color: var(--channel-color);
+  }
+
+  .colorful-fill {
+    fill: var(--channel-color);
+  }
+
+  .colorful-stroke {
+    stroke: var(--channel-color);
+  }
+}
+
+.svelte-fa {
+  width: 1.5rem;
+  font-size: 1.25rem;
+  margin-block: 0.125rem;
+}
+
+::-webkit-scrollbar {
+  @apply w-3 h-3;
+}
+::-webkit-scrollbar-track {
+  @apply bg-zinc-700;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-500 hover:bg-zinc-400 cursor-pointer;
+}
+::-webkit-scrollbar-corner {
+  /* mid zinc-700 and zinc-800 */
+  background-color: #333338;
+}
